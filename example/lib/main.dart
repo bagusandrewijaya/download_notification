@@ -42,22 +42,8 @@ class Sample extends StatefulWidget {
 
 class _SampleState extends State<Sample>{
 
-      Future<String> getImageBytes(String url) async {
-    final supportDir = await getApplicationSupportDirectory();
-    final cl = http.Client();
-    final resp = await cl.get(Uri.parse(url));
-    final bytes = resp.bodyBytes;
-    final imageFile =
-        File("${supportDir.path}/${DateTime.now().millisecond}.png");
-    await imageFile.create();
-    await imageFile.writeAsBytes(bytes);
-    return imageFile.path;
-  }
-         String? selectedCat;
-
-         DateTime? selected;
  var url4 =
-      "https://api.rsummi.co.id:1843/abc";
+      "https://go.microsoft.com/fwlink/?LinkID=521962";
    var downloadManager = DownloadManager();
   var savedDir = ""; 
   void downloadTask()async{
